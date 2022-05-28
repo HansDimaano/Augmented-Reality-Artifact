@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Use Meta to make the website look good on all devices -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Link the Liberty Icon -->
+    <link rel="shortcut icon" href="liberty.ico" type="image/x-icon">
+    <link rel="icon" href="liberty.ico" type="image/x-icon">
+
+    <!-- Link the Demo Styles CSS -->
+    <link rel="stylesheet" href="demo-styles.css" />
+
+    <!-- Title for Statue of Liberty Website -->
+    <title>Statue of Liberty</title>
+
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+
+    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script
+      src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
+      defer
+    ></script>
+  </head>
+  <body>
+
+    <!-- Card Container -->
+    <div id="card">
+
+      <!-- Model Viewer (changed the link of src, ios-src, and poster to the Statue of Liberty 3D Model Files) -->
+      <model-viewer
+        src="https://cdn.glitch.global/6900108a-9a21-42f9-8b66-c6ec3dc1abb4/LibertStatue.glb?v=1653072770335"
+        ios-src="https://cdn.glitch.global/6900108a-9a21-42f9-8b66-c6ec3dc1abb4/LibertStatue.usdz?v=1653072770198"
+        poster="https://cdn.glitch.global/6900108a-9a21-42f9-8b66-c6ec3dc1abb4/liberty.png?v=1653072769525"
+        alt="A 3D model of an astronaut"
+        shadow-intensity="1"
+        camera-controls
+        auto-rotate
+        ar
+      >
+      </model-viewer>
+
+      <!-- Attribute Section -->
+      <section class="attribution">
+
+        <!-- Title Span -->
+        <span>
+          <h1>Statue of Liberty</h1><!-- Statue of Liberty Title Text -->
+          <span>By Hans Dimaano</span><!-- Creator Name Span -->
+        </span>
+
+        <!-- CC and BY Button Link -->
+        <a
+          class="cc"
+          href="https://creativecommons.org/licenses/by/2.0/"
+          target="_blank"
+        >
+          <img
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+          />
+          <img
+            src="https://mirrors.creativecommons.org/presskit/icons/by.svg"
+          />
+        </a>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+      <!-- Page Description Span 1 with GitHub link of model viewer -->
+      <span
+        >This page is a basic demo of the
+        <a
+          href="https://github.com/GoogleWebComponents/model-viewer"
+          target="_blank"
+          >&lt;model-viewer&gt;</a
+        >
+        web component.</span
+      >
+
+      <!-- Page Description Span 2 with Remix link of Glitch-->
+      <span>It makes displaying 3D and AR content on the web easy ✌️</span>
+      <a href="https://glitch.com/edit/#!/remix/model-viewer">
+        <img
+          src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix%402x.png?1513093958726"
+          alt="remix button"
+          aria-label="remix"
+          height="33"
+        />
+      </a>
+    </footer>
+
+    <!-- 💁 Include both scripts below to support all browsers! -->
+
+    <!-- Loads <model-viewer> for modern browsers: -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </body>
+</html>
